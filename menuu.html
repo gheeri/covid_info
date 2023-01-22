@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'EB Garamond', serif !important;
+        }
+        .fontjudul{
+            font-size: 30px;
+            background-color: rgba(79,143,243,255);
+            color: white;
+        }
+        .font2{
+            font-size: 20px;
+        }
+        .banner{
+            background-color: #1B2430;
+        }
+
+        hr.a{
+            border: 1;
+            border-color: black;
+            margin: -10px;
+        }
+        hr.b{
+            border: 1;
+            border-color: black;
+        }
+        .home1{
+            background-color: rgb(248, 242, 242);
+        }
+        .home2{
+            background-color: white;
+            box-shadow: 0px -91px 38px 51px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .c{
+            text-align: justify;
+            font-size: 20px;
+            margin-right: 2px;
+        }
+        .news:not(.w3-third) {
+            display:none;
+            margin-left:10%;
+            margin-right:10%; 
+        }
+        .d{
+            color: red;
+            font-size: 20px;
+            margin-top: -3px;
+        }
+        .e{
+            font-weight: bold;
+        }
+        .f{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .table{
+            width: 500px;
+            height: 500px;
+        }
+        .warna{
+            background-color: rgba(79,143,243,255);
+            color: white;
+        }
+</style>
+    
+</head>
+<body> 
+    <div class="w3-container banner">
+        <center>
+            <h1 style="color: white;">COVID-19 CENTER INFORMATION <img src="masker.png" style="width: 100px;"></h1>
+        </center>
+    </div>
+
+    <!-- w3 bar  -->
+    <div class="w3-bar w3-center w3-cursive fontjudul">      
+        <button class="w3-button" onclick="covid19('about')">About Covid-19</button>
+        <button class="w3-button" onclick="covid19('news')">News Update</button>
+        <button class="w3-button" onclick="covid19('pencegahan')">Pencegahan</button>
+        <button class="w3-button" onclick="covid19('pengobatan')">Pengobatan</button>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button"">
+                <img src="tiga.png" style="width: 50px;">
+            </button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 warna"">
+                <button class="w3-button" onclick="covid19('home')">Home</button><hr>
+                <button class="w3-button" onclick="covid19('profile')">Profile</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Home -->
+    <div class="home1">
+        <div id="home" class="w3-container covid" style="display:block;">
+            <p style="margin-top: 10px;font-size:20px;font-weight:bold;">Home</p>
+            <h2><b> Informasi Penting Untuk Kamu</b></h2>
+            <hr class="a">
+            <div class="w3-row-padding" style="padding-bottom: 10px;">
+                <br>
+                <div class="w3-container w3-third w3-animate-left card" style="padding-bottom: 10px;">
+                    <h3>VAKSINASI COVID-19</h3>
+                    <hr class="b">
+                    <img src="thum.jpeg" style="width:90%">
+                    <hr class="b">
+                    <button class="w3-button w3-round-large warna" style="font-size:20px;"><a href="https://covid19.go.id/vaksin-covid19"> Selengkapnya</a></button>
+                </div>
+                <div class="w3-container w3-third w3-animate-top card" style="padding-bottom: 10px;">
+                    <h3>PENANGANAN</h3>
+                    <hr class="b">
+                    <img src="penanganan.webp" style="width: 80.2%;">
+                    <hr class="b">
+                    <button class="w3-button w3-round-large warna" style="font-size:20px;"><a href="https://covid19.go.id/penanganan-kesehatan">Selengkapnya</a></button>
+                </div>
+                <div class="w3-container w3-third w3-animate-top card" style="padding-bottom: 10px;">
+                    <h3>PEMULIHAN EKONOMI</h3>
+    
+                    <hr class="b">
+                    <img src="ekonomi1.jpg" style="width: 74.5%;">
+                    <hr class="b">
+                    <button class="w3-button w3-round-xlarge warna" style="font-size:20px;"><a href="https://covid19.go.id/pemulihan-ekonomi">Selengkapnya</a></button>
+                </div>
+            </div>
+            
+            <div class="home2">
+                <div id="home" class="w3-container">
+                    <h2><b>Regulasi di Indonesia</b></h2>
+                    <p style="margin-top: -15px;font-size:20px">Informasi regulasi yang sedang berlaku di Indonesia</p>
+                    <button class="w3-button warna w3-round-large" onclick="regulasi('nasional')" style="font-size: 25px;">Nasional</button>
+                    <button class="w3-button warna w3-round-large" onclick="regulasi('internasional')" style="font-size: 25px;">Internasional</button>  
+                </div>
+            <div id="nasional" class="inter" style="display:block; font-size:20px">
+                <p style="margin-left: 1%; color:indigo;font-weight:bold;">Nasional</p>
+                <ul>
+                    <li><a href="https://covid19.go.id/artikel/2022/09/14/task-force-covid-19-handling-circular-number-24-2022">Task Force For COVID-19 Handling Circular Number 24 Of 2022 </a></li>
+                    <li><a href="https://covid19.go.id/artikel/2022/08/26/surat-edaran-kasatgas-nomor-24-tahun-2022">Surat Edaran Kasatgas Nomor 24 Tahun 2022</a></li>
+                    <li><a href="https://covid19.go.id/artikel/2022/08/12/surat-edaran-kasatgas-nomor-23-tahun-2022">Surat Edaran Kasatgas Nomor 23 Tahun 2022</a></li>
+                    <li><a href="https://covid19.go.id/artikel/2022/07/08/surat-edaran-kasatgas-nomor-21-tahun-2022">Surat Edaran Kasatgas Nomor 21 Tahun 2022</a></li>
+                </ul>
+            </div>
+            <div id="internasional" class="inter" style="display: none;font-size:20px">
+                <p style="margin-left: 1%; color:indigo;font-weight:bold;">Internasional</p>
+                <ul>
+                    <li><a href="https://covid19.go.id/artikel/2022/11/11/addendum-circular-number-25-2022">Addendum To Circular Number 25 of 2022</a></li>
+                    <li><a href="https://covid19.go.id/artikel/2022/10/24/addendum-surat-edaran-kasatgas-nomor-25-tahun-2022">Addendum Surat Edaran Kasatgas Nomor 25 Tahun 2022</a></li>
+                    <li><a href="https://covid19.go.id/artikel/2022/09/22/covid-19-task-force-circular-no-25-2022-healths-protocols-international-travels">COVID-19 Task Force Circular No. 25 of 2022 on Healths Protocols for International Travels</a></li>
+                    <li><a href="https://covid19.go.id/artikel/2022/09/01/surat-edaran-kasatgas-nomor-25-tahun-2022">Surat Edaran Kasatgas Nomor 25 Tahun 2022</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- Profile -->
+    <div id="profile" class="w3-container covid" style="display:none;">
+        <center>
+            <div class="w3-row-padding">
+                <br>
+                <div class="w3-container w3-third w3-animate-fading" style="margin: 20px;">
+                    <img src="aing.jpg" class="w3-circle" style="width:30%">
+                </div>
+                <div class="w3-container w3-third w3-animate-fading font2">
+                    <p>Nama : Gilang Rifaldi</p>
+                    <p>NIM : 10122080</p>
+                    <p>Kelas : IF-3</p>
+                </div>
+                    <table class="font2" style="margin: 20px;">
+                        <tr><td><img src="ig1.png" style="width: 50px;"><td>: <a href="https://www.instagram.com/gilang_rifaldi20/?hl=id">gilang_rifaldi20</a></td></tr>
+                        <tr><td><img src="fb1.png" style="width: 50px;"><td>: <a href="https://www.facebook.com/profile.php?id=100013785936479">Gilang Rifaldi</a></td></tr>
+                        <tr><td><img src="tele.png" style="width: 50px;"><td>: <a href="https://t.me/gheeri20">Gilang Rifaldi</a></td></tr>
+                    </table>
+            </div>
+    </div>
+    
+    <!-- About -->
+        <div id="about" class="covid w3-animate-opacity" style="display: none;">
+            <div class="w3-container w3-twothird" style="padding: 0px 15px;">
+                <h5><b>About Covid-19</b></h5><br>
+                <h2><b>World Health Organization in Indonesia</b></h2>
+                <hr>
+                <h3><b>The World Health Organization (WHO)</b></h3>
+                    <p class="c">
+                        The World Health Organization (WHO) was established on 7 April 1948 as the directing and coordinating authority in global public health within the United Nations system. Working at three levels in the Organization (global, regional and country), more than 7000 WHO staff worldwide collaborate with the governments of 194 Member States and other partners to achieve the WHO founding vision of the attainment of the highest possible level of health by all people.
+                    </p>
+                    <p class="c">
+                        Through its country offices, the organization provides technical support to the government of the member states. WHO’s headquarters and 6 regional offices provide additional support.
+                    </p>
+                    <br>
+                <h3><b>WHO in Indonesia</b></h3>
+                    <p class="c">
+                        The WHO South-East Asia Regional Office (SEARO) located in New Delhi, India, covers 11 countries, including Indonesia. Independently, Indonesia opted to join the South East Asia Region classification when it joined WHO on 23 May 1950.
+                    </p>
+                    <p class="c">
+                        Within Indonesia, WHO collaborates in a wide scope of health development activities. The country is both the 4th most populous country and the largest archipelago in the world. Its population of 270 million inhabits some of its 17,000 islands with rich geographical contour sitting on the most active volcanic ring.
+                    </p>
+                    <p class="c">
+                        Currently, the collaboration between the WHO Country Office to Indonesia (WHO Indonesia) with the Government of Indonesia, represented mainly by the Ministry of Health, are covering 5 categories:
+                    </p>
+                    <ul class="c">
+                        <li>communicable and noncommunicable diseases;</li>
+                        <li>promoting health through the life-course;</li>
+                        <li>development of health system particularly on policies, and;</li>
+                        <li>preparedness, surveillance and response.</li>
+                    </ul>
+                    <p class="c">
+                        The specific focused areas are control of tuberculosis, HIV/AIDS, malaria, vaccine-preventable diseases, mental health, injuries prevention, nutrition and prevention of noncommunicable diseases. Other collaboration areas include developing the quality of mother and childcare, healthy ageing, food safety, human resources, medicines, health systems information, international health regulations, epidemic, pandemic disease and emergencies response.
+                    </p>
+                    <p class="c">
+                        On 1st January 2014, Indonesia launched a national health insurance programme called Jaminan Kesehatan Nasional (JKN). With an emphasis on Universal Health Coverage, WHO Indonesia is supporting the country to reach full population coverage by 2019.
+                    </p>
+                    <p class="c">
+                        Understanding how health requires a multisectoral approach, WHO also collaborates with other partners. WHO also works with other UN agencies through the United Nations Partnership for Development Framework (UNPDF).
+                    </p>
+            </div>
+            <div class="w3-third">
+                <br>
+                <img src="global.png" style="width: 100%;">
+            </div>
+            <div>
+                <img src="foto.png" style="width:100%;">
+            </div>
+        </div>
+    
+    <!-- Nes Update -->
+    <div id="news" class="w3-container covid news w3-animate-bottom">
+        <h5 style="margin-top: 2%; font-size:20px;"><b>News Update</b><span id="tanggalwaktu" style="margin-left:85%; font-size:20px; font-weight:bold;"></span></h5>
+        <hr class="a">
+        <div class="w3-row" style="padding-bottom: 10px; margin-top:2%">
+            <center>
+            <table width="1500px">
+                <tr>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu3.webp" style="width: 100%;">
+                            <div class="w3-container">
+                                <p style="margin-top: 4%;font-size:20px;color:red;">21 Jan 2023</p>
+                                <p class="f">Situasi COVID-19 di Indonesia (Update Per 21 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -5px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/21/situasi-covid-19-di-indonesia-update-21-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu1.jpg" style="width: 100%;">
+                            <div class="w3-container">
+                                <p class="d">20 Jan 2023</p>
+                                <p class="f">Percepatan Penanganan COVID-19 di Indonesia (Update Per 20 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -4px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/20/percepatan-penanganan-covid-19-di-indonesia-update-20-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu2.jpeg" style="width:100%;">
+                            <div class="w3-container">
+                                <p class="d">20 Jan 2023</p>
+                                <p class="f">Grafik Kasus Aktif, Kasus Sembuh dan Kasus Meninggal per Provinsi</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -4px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/20/grafik-kasus-aktif-kasus-sembuh-dan-kasus-meninggal-provinsi-update-20-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu3.webp" style="width: 100%;">
+                            <div class="w3-container">
+                                <p class="d">20 Jan 2023</p>
+                                <p class="f">Situasi COVID-19 di Indonesia (Update Per 20 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: 3%;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/20/situasi-covid-19-di-indonesia-update-20-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu4.webp" style="width: 100%;">
+                            <div class="w3-container">
+                                <p style="margin-top: -1%;font-size:20px;color:red;">20 Jan 2023</p>
+                                <p class="f">Analisis Data COVID-19 Indonesia (Update per 15 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: 3.5%;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/20/analisis-data-covid-19-indonesia-update-15-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu3.webp" style="width:100%;">
+                            <div class="w3-container">
+                                <p class="d">19 Jan 2023</p>
+                                <p class="f">Situasi COVID-19 di Indonesia (Update Per 19 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: 3%;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/19/situasi-covid-19-di-indonesia-update-19-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu2.jpeg" style="width: 100%;">
+                            <div class="w3-container">
+                                <p class="d">18 Jan 2023</p>
+                                <p class="f">Grafik Kasus Aktif, Kasus Sembuh dan Kasus Meninggal per Provinsi</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -1%;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/18/grafik-kasus-aktif-kasus-sembuh-dan-kasus-meninggal-provinsi-update-18-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu6.jpeg" style="width: 100%;">
+                            <div class="w3-container">
+                                <p style="margin-top: -1%;font-size:20px;color:red;">18 Jan 2023</p>
+                                <p class="f">Situasi COVID-19 di Indonesia (Update per 18 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -2px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/18/situasi-covid-19-di-indonesia-update-18-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu1.jpg" style="width:100%;">
+                            <div class="w3-container">
+                                <p style="margin-top: -1%;font-size:20px;color:red;">18 Jan 2023</p>
+                                <p class="f">Percepatan Penanganan COVID-19 di Indonesia (Update per 18 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -2px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/18/percepatan-penanganan-covid-19-di-indonesia-update-18-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu1.jpg" style="width: 100%;">
+                            <div class="w3-container">
+                                <p class="d">17 Jan 2023</p>
+                                <p class="f">Percepatan Penanganan COVID-19 di Indonesia (Update per 17 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -1%;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/17/percepatan-penanganan-covid-19-di-indonesia-update-17-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu2.jpeg" style="width: 100%;">
+                            <div class="w3-container">
+                                <p style="margin-top: -1%;font-size:20px;color:red;">17 Jan 2023</p>
+                                <p class="f">Grafik Kasus Aktif, Kasus Sembuh dan Kasus Meninggal per Provinsi</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -2px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/17/grafik-kasus-aktif-kasus-sembuh-dan-kasus-meninggal-provinsi-update-17-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding:15px" width="500px" height="500px">
+                        <div class="w3-card-4 table">
+                            <img src="nu3.webp" style="width:100%;">
+                            <div class="w3-container">
+                                <p style="margin-top: 3.5%;font-size:20px;color:red;">17 Jan 2023</p>
+                                <p class="f">Situasi COVID-19 di Indonesia (Update per 17 Januari 2023)</p>
+                                <button class="warna w3-button w3-round-large button" style="margin-top: -2px;font-size:20px;">
+                                    <a href="https://covid19.go.id/artikel/2023/01/17/situasi-covid-19-di-indonesia-update-17-januari-2023">Selengkapnya</a>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+     
+    <!-- Pencegahan -->
+    <div id="pencegahan" class="covid" style="display: none;">
+        <h5 style="margin-left: 15px;"><b>Pencegahan</b></h5>
+            <div class="w3-row-padding">
+                <br>
+                <div class="w3-container w3-third w3-animate-left">
+                    <img src="pncegahan.jpg" style="width: 90%;">
+                    <img src="tanya.png" style="width: 90%;margin-top:2%;">
+                </div>
+                <div class="w3-container w3-twothird w3-animate-right font2">
+                    <h2 style="font-size: 40px;font-weight:bold;margin-top:-1%">Bagaimana cara mencegah penularan virus corona?</h2>
+                    <p style="font-size: 22px;">Beberapa cara yang bisa dilakukan untuk mencegah penularan virus ini adalah:</p>
+                    <ul style="font-size: 22px;margin-top:-1%;">
+                        <li>Menjaga kesehatan dan kebugaran agar stamina tubuh tetap prima dan sistem imunitas / kekebalan tubuh meningkat.</li>
+                        <li>Mencuci tangan dengan benar secara teratur menggunakan air dan sabun atau hand-rub berbasis alkohol.
+                            Mencuci tangan sampai bersih selain dapat membunuh virus yang mungkin ada di tangan kita, tindakan ini juga merupakan
+                            salah satu tindakan yang mudah dan murah. Sekitar 98% penyebaran penyakit bersumber dari tangan. Karena itu, menjaga 
+                            kebersihan tangan adalah hal yang sangat penting.</li>
+                        <li>Jaga jarak setidaknya 1 meter dengan orang lain. Jika anda terlalu dekat, anda dapat menghirup droplet dari orang yang mungkin menderita COVID-19.</li>
+                        <li>Ketika batuk dan bersin, tutup hidung dan mulut Anda dengan tisu atau lengan atas bagian dalam (bukan dengan telapak tangan).</li>
+                        <li>Hindari menyentuh mata, hidung dan mulut (segitiga wajah). Tangan menyentuh banyak hal yang dapat terkontaminasi virus. 
+                            Jika kita menyentuh mata, hidung dan mulut dengan tangan yang terkontaminasi, maka virus dapat dengan mudah masuk ke tubuh kita.</li>
+                        <li>Gunakan masker dengan benar hingga menutupi mulut dan hidung ketika Anda sakit atau saat sedang keluar rumah.</li>
+                        <li>Buang tisu dan masker yang sudah digunakan ke tempat sampah dengan benar, lalu cucilah tangan Anda.</li>
+                        <li>Tetap dirumah,  hindari kontak dengan orang lain dan bepergian ke tempat umum.</li>
+                        <li>Hindari bepergian ke luar rumah saat Anda merasa kurang sehat, terutama jika Anda merasa demam, 
+                            batuk dan sulit bernapas. Segera hubungi petugas kesehatan terdekat, dan mintalah bantuan mereka. 
+                            Sampaikan pada petugas jika dalam 14 hari sebelumnya Anda pernah melakukan perjalanan terutama 
+                            ke negara atau wilayah terjangkit, atau pernah kontak erat dengan orang yang memiliki gejala yang sama. Ikuti arahan dari petugas kesehatan setempat.</li>
+                        <li>Menunda perjalanan ke wilayah/ negara dimana virus ini ditemukan.</li>
+                        <li>Selalu pantau perkembangan penyakit COVID-19 dari sumber resmi dan akurat. Ikuti arahan dan informasi dari petugas kesehatan dan Dinas Kesehatan setempat. 
+                            Informasi dari sumber yang tepat dapat membantu Anda melindungi dari Anda dari penularan dan penyebaran penyakit ini.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="background-color: rgb(248, 242, 242); text-align:center">
+                <a href="https://infeksiemerging.kemkes.go.id/"><img src="logo.png" style="width: 15%;margin-top:3%"></a>
+                <p style="font-weight:lighter;margin-top:-2px">Media Informasi Resmi Terkini Penyakit Infeksi Emerging</p>
+                <p style="font-size: 20px;"><a href="https://www.kemkes.go.id/">KEMENTERIAN KESEHATAN RI</a></p>
+                <p style="font-size: 20px;"><a href="https://pppl.depkes.go.id/">Direktorat Jenderal Pencegahan dan Pengendalian Penyakit</a></p>
+                <p style="font-size: 20px;"><a href="https://infeksiemerging.kemkes.go.id/uncategorized/bagaimana-cara-mencegah-penularan-virus-corona#">Direktorat Surveilans dan Karantina Kesehatan</a></p>
+            </div>
+    </div>
+
+    <!-- Pengobatan -->
+    <div id="pengobatan" class="w3-container covid" style="display: none;">
+        <h5><b>Pengobatan</b></h5>
+        <br>
+        <div class="w3-container w3-third">
+            <img src="covid.jpg" style="width: 95%;">
+            <img src="2jpg.jpg" style="width: 95%;margin-top:10%">
+            <img src="3jpg.jpg" style="width: 95%;margin-top:10%">
+            <img src="5jpg.jpg" style="width: 95%;margin-top:10%">
+        </div>
+        <div class="w3-container w3-twothird w3-animate-zoom font2">
+            <h2 style="font-size: 40px;font-weight:bold;margin-top:-1%;">Bagaimana cara mencegah penularan virus corona?</h2>
+            <p style="font-size: 22px;">Berikut ini ada 6 cara pengobatan popiuler merawat pasien COVID-19:</p>
+            <ul style="font-size: 22px;margin-top:-1%;">
+                <li><h4 style="font-size: 22px;color:blue;font-weight:bold;">Terapi Antibodi Monoklonal</h4>
+                    <p style="margin-top: -15px;"> 
+                        Antibodi monoklonal merupakan protein buatan yang yang mengikuti atau meniru sistem kekebalan tubuh manusia 
+                        untuk melawan antigen berbahaya seperti virus. Regdanvimab merupakan antibodi monoklonal rekombinan untuk pengobatan
+                        COVID-19 yang didapatkan dari sel darah putih penyintas COVID-19. Melalui skrining, regdanvimab menunjukkan potensi paling 
+                        tinggi dalam menetralisir virus SARS-CoV-2.
+                    </p>
+                    <p style="margin-top: -15px;">
+                        Terapi antibodi monoklonal, khususnya dengan menggunakan regdanvimab sudah dilakukan di beberapa benua 
+                        dan negara di dunia seperti Eropa, Amerika Serikat, Kanada, Jordan, Saudi Arabia, Uni Emirat Arab, serta Korea Selatan. 
+                        Di Indonesia sendiri, telah tersedia dengan merek Regkirona™. Penggunaanya sudah disetujui oleh BPOM untuk terapi antibodi monoklonal pasien COVID-19.
+                    </p>
+                    <p style="margin-top: -15px;">
+                        Pada pengujian yang dilakukan oleh perusahaan farmasi Korea Selatan, Celltrion Healthcare, penggunaan Regkirona™ mempercepat pemulihan pasien COVID-19 
+                        dengan rata-rata waktu pemulihan kurang dari 5 hari. Selain itu, Regkirona™ juga efektif dalam menetralisir virus COVID-19 varian Delta. Pengujian ini dilakukan di 
+                        beberapa negara termasuk Rumania, Amerika Serikat, Mexico, dan Korea selatan.
+                    </p>
+                </li>
+                <li><h4 style="font-size: 22px;color:blue;font-weight:bold;">Terapi Plasma Konvalesen</h4>
+                    <p style="margin-top: -15px;">
+                        Plasma konvalesen adalah plasma yang diambil dari pasien yang telah dinyatakan sembuh dari Covid-19. Plasma adalah bagian dari darah yang mengandung antibodi. Pasien yang telah sembuh dari Covid-19 diharapkan telah memiliki antibodi sebagai perlawanan sistem imun terhadap virus SARS-CoV-2.
+                    </p>
+                    <p style="margin-top: -15px;">
+                        Terapi plasma konvalesen adalah terapi yang dilakukan dengan mendonorkan plasma orang yang telah sembuh dari Covid-19 kepada pasien yang masih terinfeksi. Hal ini dilakukan dengan harapan akan membantu antibodi pada tubuh pasien yang masih sakit. Sehingga terapi ini mampu mencegah penyakit berkembang lebih parah dan mempercepat waktu penyembuhan.
+                    </p>
+                </li>
+                <li><h4 style="font-size: 22px;color:blue;font-weight:bold;">Kortikosteroid</h4>
+                    <p style="margin-top: -15px;">
+                        Penelitian tentang kegunaan kortikosteroid dalam menangani pasien COVID-19 dengan gejala gangguan pernapasan parah pertama kali dilakukan oleh peneliti China pada awal Maret. Pada Juni lalu, peneliti di Inggris meneliti lebih lanjut kegunaan kortikosteroid yang dapat menyelamatkan nyawa pasien COVID-19 yang sedang dalam kondisi kritis. Kortikosteroid yang digunakan adalah dexamethasone. Dexamethasone atau deksametason adalah salah satu steroid jenis kortikosteroid. Obat ini biasanya digunakan untuk mengatasi pasien dengan peradangan, gangguan pencernaan, asma, dan reaksi alergi.
+                    </p>
+                    <p><img src="cid1.webp"</p>
+                    <p style="margin-top: -15px;">
+                        WHO menyarankan untuk menghindari penggunaan kortikosteroid di awal masa infeksi COVID-19. Alasannya, obat steroid tersebut dapat menghalangi upaya sistem kekebalan tubuh dalam melawan virus. Namun jika digunakan di masa tengah hingga akhir infeksi COVID-19, deksametason dapat membantu menangkal terjadinya badai sitokin (respons imun berlebihan yang justru menyerang jaringan tubuh).
+                    </p>
+                </li>
+                <li><h4 style="font-size: 22px;color:blue;font-weight:bold;">Pengencer Darah</h4>
+                    <p><img src="cid2.jpg" alt=""></p>
+                    <p style="margin-top: -15px;">
+                        Tapi selain masalah pernapasan, sekitar 16% orang yang dirawat di rumah sakit dengan Covid-19 mengalami masalah dengan darah dan pembuluh darahnya, yang menyebabkan pembekuan darah di arteri, vena, dan paru-paru. Gumpalan darah ini dapat terlepas dan menyebar ke bagian tubuh lain, di mana dapat menyebabkan penyumbatan yang menyebabkan serangan jantung atau stroke. Beberapa pedoman merekomendasikan pemberian pengencer darah ketika orang pertama kali dirawat di rumah sakit dengan COVID-19, untuk mencegah penggumpalan darah berkembang, daripada menunggu untuk melihat apakah pembekuan darah berkembang dan kemudian mengobatinya dengan pengencer darah.
+                    </p>
+                </li>
+                <li><h4 style="font-size: 22px;color:blue;font-weight:bold;">Remdesivir</h4>
+                    <p style="margin-top: -15px;">
+                        Remdesivir adalah obat antivirus yang dapat digunakan untuk menangani infeksi COVID-19. Obat ini hanya disarankan pada pasien COVID-19 gejala berat yang perlu dirawat di rumah sakit atau pasien gejala ringan-sedang yang berisiko tinggi untuk mengalami perburukan gejala.
+                        Remdesivir merupakan antivirus yang bekerja dengan cara menghentikan perkembangan infeksi virus SARS-CoV-2 (COVID-19) di dalam tubuh. Obat ini diketahui dapat mempercepat waktu penyembuhan dan mengurangi risiko terjadinya kerusakan pada saluran pernapasan akibat infeksi COVID-19.
+                    </p>
+                </li>
+                <li><h4 style="font-size: 22px;color:blue;font-weight:bold;">Tocilizumab</h4>
+                    <p style="margin-top: -15px;">
+                        Penggunaan tocilizumab untuk terapi COVID-19 derajat berat menarik banyak perhatian. Tocilizumab dianggap sebagai salah satu regimen tata laksana COVID-19 yang menjanjikan karena memiliki kemampuan untuk menarget reseptor interleukin-6 (IL-6). Tocilizumab adalah antibodi monoklonal rekombinan reseptor anti-interleukin 6 (IL-6R). Pertama kali diperkenalkan pada tahun 2005 untuk penatalaksanaan penyakit Castleman, dan saat ini digunakan untuk rheumatoid arthritis dengan gejala sedang hingga berat.
+                    </p>
+                    <p style="margin-top:-15px;">
+                        IL-6 merupakan salah satu sitokin proinflamasi dengan kadar tertinggi dan berkaitan erat dengan derajat keparahan pasien COVID-19. Kadar IL-6 berhubungan dengan manifestasi klinis COVID-19, dan menjadi penanda prediktif pada luaran fatal. Penggunaan tocilizumab, sebagai salah satu agen antibodi monoklonal, pada kasus COVID-19 derajat berat terkait dengan kemampuan menginhibisi ikatan IL-6 dengan reseptornya. Tocilizumab dapat berkompetisi dengan reseptor IL-6, baik dalam bentuk larut maupun bentuk terikat membran. Hal ini mengakibatkan jalur pensinyalan klasik dan trans terhambat, sehingga menurunkan aktivitas proinflamasi.
+                    </p>
+                </li>
+            </ul>            
+
+
+        </div>
+
+    </div>
+
+    
+
+<script>
+    function covid19(namakota) {
+    var i;
+    var x = document.getElementsByClassName("covid");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    document.getElementById(namakota).style.display = "block";
+    }
+    function regulasi(inter){
+        var i;
+        var x = document.getElementsByClassName("inter");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        document.getElementById(inter).style.display = "block";
+    }
+    var dt = new Date();
+    document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleDateString();
+</script>    
+</body>
+</html>
